@@ -18,8 +18,8 @@ cd stable-diffusion-2-1-base/
 sudo -u ubuntu git lfs pull --include "v2-1_512-ema-pruned.ckpt"
 sudo -u ubuntu git lfs install --force
 cd ..
-mv stable-diffusion-2-1-base/v2-1_512-ema-pruned.ckpt stable-diffusion-webui/models/Stable-diffusion/
-rm -rf stable-diffusion-2-1-base/
+cp stable-diffusion-2-1-base/v2-1_512-ema-pruned.ckpt stable-diffusion-webui/models/Stable-diffusion/
+# rm -rf stable-diffusion-2-1-base/
 
 # change ownership of the web UI so that a regular user can start the server
 sudo chown -R ubuntu:ubuntu stable-diffusion-webui/
